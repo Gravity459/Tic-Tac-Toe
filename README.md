@@ -6,4 +6,4 @@ This project is one of the starting projects for me and it can help any beginner
 
 Main Objective: To implement Modules and to use Factories for the creation of objects.
 
-The live preview for the site is at: 
+The live preview for the site is at: https://gravity459.github.io/Tic-Tac-Toe/
