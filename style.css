@@ -1,0 +1,343 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dominant-color: rgb(42, 9, 68);
+    --secondary-1: rgb(59, 24, 95);
+    --secondary-2: rgb(161, 37, 104);
+    --complementary: rgb(254, 194, 96);
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    font-family: 'ZCOOL KuaiLe', cursive;
+    background-color: var(--dominant-color);
+}
+
+
+h1 {
+    font-size: 70px;
+}
+
+h1, h2 {
+    color: var(--complementary);
+}
+
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    width: 100%;
+    height: 100px;
+}
+
+.header h1 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    color: var(--complementary);
+}
+
+.grid-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.options {
+    width: 400px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px 15px 0px 0px;
+    background-color: var(--secondary-1);
+}
+
+.player-1, .player-2 {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.buttons1, .buttons2 {
+    max-width: 225px;
+    height: 50px;
+}
+
+.option-btn {
+    width: 100px;
+    height: 40px;
+    margin: 5px;
+    outline: none;
+    font-size: 25px;
+    border-radius: 10px;
+    border: 1px transparent;
+    color: var(--complementary);
+    font-family: 'ZCOOL KuaiLe', cursive;
+    background-color: var(--secondary-1);
+}
+
+.option-btn:hover {
+    animation: whitener 0.5s;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes whitener {
+    100%{
+        color: white;
+        font-size: 30px;
+        background-color: var(--dominant-color);
+    }
+}
+
+.selected {
+    color: white;
+    background-color: var(--dominant-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.grid {
+    width: 400px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    background-color: var(--secondary-2);
+}
+
+.grid-element {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--secondary-1);
+    color: var(--complementary);
+    font-size: 100px;
+}
+
+.grid-element:hover {
+    /* background-color: var(--dominant-color); */
+    background-color: var(--secondary-1);
+}
+
+.restart-button {
+    width: 400px;
+    height: 50px;
+    border-radius: 0px 0px 15px 15px;
+    background-color: var(--secondary-1);
+    color: var(--complementary);
+}
+
+.restart-button h2 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.restart-button h2:hover {
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.form-container {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* display: none; */
+}
+
+.display-form {
+    animation: formAnimateShow 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes formAnimateShow {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.form-group {
+    width: 400px;
+    height: 400px;
+    /* background-image: linear-gradient(to right, rgb(4, 0, 255), rgb(255, 0, 200)); */
+    /* background-image: linear-gradient(to bottom, var(--dominant-color), var(--secondary-1), var(--secondary-2), var(--complementary)); */
+    background-color: var(--dominant-color);
+    border-radius: 20px;
+    display: grid;
+    grid-template-rows: 80% auto;
+}
+
+.form-elements {
+    width: 100%;
+    height: 80%;
+}
+
+.buttons-input {
+    display: flex;
+    justify-content: space-around;
+}
+
+.submitBtn {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.submit-btn {
+    width: 150px;
+    height: 60px;
+    border-radius: 50px;
+    font-size: 25px;
+    color: var(--complementary);
+    font-family: 'ZCOOL KuaiLe', cursive;
+    background-color: var(--secondary-2);
+    border: 1px transparent;
+}
+
+.submit-btn:hover {
+    color: white;
+    font-size: 30px;
+}
+
+.boy, .girl {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.boy input, .girl input {
+    width: 175px;
+    height: 50px;
+    margin-top: 50px;
+    outline: none;
+    border: 5px solid var(--complementary);
+    border-radius: 50px;
+    padding-left: 10px;
+    font-size: 20px;
+    color: var(--secondary-1);
+    font-family: 'ZCOOL KuaiLe', cursive;
+    font-weight: 700;
+}
+
+.boy img {
+    width: 100px;
+    height: 127px;
+    border-radius: 10px;
+}
+
+.boy .gender-btn {
+    padding-top: 13px;
+    background-color: rgb(245, 245, 245);
+}
+
+.girl img {
+    width: 135px;
+    height: 135px;
+    border-radius: 10px;
+}
+
+.girl .gender-btn {
+    padding-bottom: 10px;
+    background-color: rgb(253, 253, 253);
+}
+
+.gender-btn {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    margin-top: 50px;
+    border-radius: 15px;
+}
+
+.gender-btn:hover {
+    border: 5px solid var(--secondary-2);
+    box-shadow: 1px 23px 13px -10px rgba(0,0,0,0.71);
+}
+
+.focused {
+    border: 5px solid var(--secondary-2);
+    box-shadow: 1px 23px 13px -10px rgba(0,0,0,0.71);
+}
+
+
+@media (max-width: 420px) {
+
+    .header {
+        height: 20vh;
+    }
+
+    .grid-container {
+        margin: auto;
+        width: 90%;
+    }
+
+    .grid, .options, .restart-button, .player-1, .player-2{
+        width: 100%;
+        font-size: small;
+    }
+
+    .buttons1, .buttons2 {
+        width: 50%;
+    }
+
+    .option-btn {
+        width: 35%;
+    }
+}
